@@ -1,0 +1,50 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300');
+
+body {
+		color:#333;
+  	background-color:#ECE9E9;
+  	font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+}
+
+#bg{
+	background: url('lamp.png') no-repeat center center fixed;
+}
+
+.left-idea{
+	background: asset-url('balao1.png') no-repeat;
+	height: 290px;
+}
+
+.right-idea{
+	background: asset-url('balao2.png') no-repeat right;
+	height: 290px;
+	margin-bottom: 40px;
+	margin-top: 120px;
+}
+
+span.text-left{
+	float: left;
+	margin: 36px;
+	width: 300px;
+}
+
+span.text-right{
+	margin: 33px 34px;
+	width: 300px;
+	float: right;
+	text-align: left;
+}
+footer{
+	background-color: #ffa600;
+	padding: 20px;
+	border-top-style: solid;
+	border-top-color: #446342;
+	border-width: 10px;
+	margin-top: 10px
+}
+
+footer > h2{
+	font-size: 46px;
+	text-align: center;
+	color: #446342;
+}

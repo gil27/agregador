@@ -37,4 +37,8 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', ref: 'bootstrap3'
+gem "font-awesome-rails"
