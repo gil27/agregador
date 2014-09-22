@@ -22,9 +22,9 @@ namespace :deploy do
   end
 
   task :bundleinstall, :roles => :app do
+    run "cd #{release_path}; bundle exec rake db:setup"
+    run "cd #{release_path}; bundle exec rake db:seed"
     run "cd #{release_path}; bundle exec bundle install"
-    run "cd #{release_path}; rake db:setup"
-    run "cd #{release_path}; rake db:seed"
   end
 
   task :rvmrc, :roles => :app do
