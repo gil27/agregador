@@ -9,7 +9,7 @@ module IdeasHelper
 		end
 		content_tag :div, class: position do
 			content_tag :span, class: span do
-				idea.description
+				link_to truncate(idea.description, length: 300), idea_path(idea.id), class: 'ideas'
 			end
 		end
 	end
