@@ -22,8 +22,12 @@ namespace :deploy do
   end
 
   task :bundleinstall, :roles => :app do
-    run "cd #{release_path}; bundle exec rake db:setup"
+    run "cd #{release_path}; bundle exec rake db:create"
+    puts "created"
+    run "cd #{release_path}; bundle exec rake db:migrate"
+    puts "migration"
     run "cd #{release_path}; bundle exec rake db:seed"
+    puts "seed"
     run "cd #{release_path}; bundle exec bundle install"
   end
 
