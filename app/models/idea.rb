@@ -1,6 +1,13 @@
 class Idea < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
+  
+  PER_PAGE = 10
+  scope :paginate, ->(current_page=1) {
+    current_page = (current_page.to_i || 1)
+    page(current_page).per(PER_PAGE)
+  }
+
   def self.search(query)
     __elasticsearch__.search(
       {
