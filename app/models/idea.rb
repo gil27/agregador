@@ -33,8 +33,7 @@ end
 Idea.__elasticsearch__.client.indices.delete index: Idea.index_name rescue nil
  
 # Create the new index with the new mapping
-Idea.__elasticsearch__.client.indices.create \
-  index: Idea.index_name
+Idea.__elasticsearch__.client.indices.create index: Idea.index_name
  
 # Index all article records from the DB to Elasticsearch
 Idea.import
