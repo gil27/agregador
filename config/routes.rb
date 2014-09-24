@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'execute' => 'ideas#execute'
   root 'ideas#index'
 
-  match 'auth/:provider/callback', to: 'sessions#create'
-  match 'auth/failure', to: redirect('/')
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
   #match 'signout', to: 'sessions#destroy', as: 'signout'
 end
