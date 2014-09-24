@@ -12,7 +12,7 @@ loadMore = ->
   currentPage = $pager.data('currentPage') || 1
   nextPage    = currentPage + 1
 
-  $.get "/ideas/index.js?page=#{nextPage}"
+  $.ajax "/ideas/index.js?page=#{nextPage}"
   $pager.data 'currentPage', nextPage
 
 hasMoreElements = -> $('.loading').length > 0

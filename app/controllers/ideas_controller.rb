@@ -1,10 +1,6 @@
 class IdeasController < ApplicationController
   def index
   	@ideas = Idea.paginate(params[:page])
-  	respond_to do |format|
-  		format.html
-  		format.js
-  	end
   end
 
   def new
