@@ -11,13 +11,13 @@ body {
 }
 
 .left-idea{
-	background: asset-url('balao1.png') no-repeat;
-	height: 290px;
+	background: asset-url('ballon1.png') no-repeat;
+	height:324px;
 }
 
 .right-idea{
-	background: asset-url('balao2.png') no-repeat right;
-	height: 290px;
+	background: asset-url('ballon2.png') no-repeat right;
+	height: 300px;
 	margin-bottom: 40px;
 	margin-top: 120px;
 }
@@ -26,13 +26,14 @@ span.text-left{
 	float: left;
 	margin: 36px;
 	width: 300px;
+	text-align: -webkit-center;
 }
 
 span.text-right{
-	margin: 33px 34px;
+	margin: 33px 44px;
 	width: 300px;
 	float: right;
-	text-align: left;
+	text-align: -webkit-center;
 }
 footer{
 	background-color: #fccc28;
