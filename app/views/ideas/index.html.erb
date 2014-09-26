@@ -1,26 +1,18 @@
-<h1>Frase Legal e impactante aqui</h1>
-<p>Tire suas idéias do papel!</p>
+<div class="box">
+  <h1>Frase Legal e impactante aqui</h1>
+  <span class="left text-left">Tire suas idéias do papel!</span>
 
-<div class="row progress">
-  <%= render @ideas %>
+  <span class="right text-right">
+    Faça Login com: <%= fa_icon('facebook') %>&nbsp;<%= fa_icon('twitter') %>
+  </span>
 </div>
 
-<div class='loading'>
-  Carregando...
-</div>
-
-<script>
-  $(function(){
-    updateProjectSections();
-  })
-
-  function updateProjectSections(offsetElement){
-    var actionsLi = null;
-
-    if(offsetElement){
-      actionsLi = offsetElement.nextAll()
-    }else{
-      actionsLi = $('.progress');
-    }
-  }
-</script>
+<% @ideas.each do |idea| %>
+  <div class="idea" onmouseover="this.className='idea-hover'" onmouseout="this.className='idea'">
+    <div class="content">
+      <h2><%= link_to idea.title, idea_path(idea) %></h2>
+      <p><%= link_to idea.description, idea_path(idea), class: 'idea-text' %></p>
+      <span class="heart"><%= fa_icon('heart') %></span>
+    </div>
+  </div>
+<% end %>

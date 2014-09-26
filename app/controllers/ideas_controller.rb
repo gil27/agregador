@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   def index
-  	@ideas = Idea.paginate(params[:page])
+  	@ideas = Idea.all
   end
 
   def new
