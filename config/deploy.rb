@@ -2,7 +2,7 @@ require "bundler/capistrano"
 require "rvm/capistrano"
 
 set :application, "gilgomes.com.br"
-set :repository,  "git@github.com:gil27/agregador.git"
+set :repository,  "https://github.com/gil27/agregador.git"
 set :scm, :git
 
 role :web, "gilgomes.com.br"
@@ -39,6 +39,7 @@ end
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 
 set :rvm_type, :user
+set :rails_env, "production"
 set :rvm_ruby_string, 'ruby-2.1.3'
 
 ssh_options[:forward_agent] = true

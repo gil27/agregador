@@ -101,4 +101,12 @@ a.idea-text{
 	color: #333;
 	background-color: transparent;
 	text-decoration: none;
-};
+}
+
+.bg-public { 
+  background: asset-url("bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

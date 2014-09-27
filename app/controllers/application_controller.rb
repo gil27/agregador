@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     if current_user
     else
-      redirect_to '/welcome', alert: 'Você deve fazer login antes de continuar!'
+      redirect_to '/welcome'
     end
   end
 
