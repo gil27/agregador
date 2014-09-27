@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
+	validates_uniqueness_of :uid
 
 	def self.create_from_omniauth(omniauth)
-		create(
+		find_or_create_by!(
 				uid: omniauth['uid'],
 				provider: omniauth['provider'],
 				name: omniauth['info']['name'],
