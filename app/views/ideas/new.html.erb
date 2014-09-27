@@ -1,1 +1,21 @@
-new
+<div class="box"><h1>Compartilhe sua idéia!</h1></div>
+<div class="box" style="padding:50px;">
+<%= form_for @idea, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <div class="controls">
+      <%= f.text_field :title, :class => 'form-control', placeholder: 'Título da Idéia' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="controls">
+      <%= f.text_area :description, :class => 'form-control', placeholder: 'Descrição', rows: 10 %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <%= f.submit 'Compartilhar', :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => 'Cancelar'), root_path, :class => 'btn btn-default' %>
+  </div> 
+<% end %>
+</div>
