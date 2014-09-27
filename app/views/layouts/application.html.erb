@@ -49,9 +49,11 @@
         <%= link_to "+ Idéias", root_path, class: 'navbar-brand' %>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
+            <li><%= link_to "Nova Idéia", new_idea_path  %></li>
+            <li><%= link_to "Minhas Idéias", user_ideas_path  %></li>
             <li><%= link_to "Faça", execute_path  %></li>
             <li><%= link_to "Sobre", sobre_path  %></li>
+            <li><%= link_to "Sair", signout_path %></li>
           </ul>
         </div>
       </div>
