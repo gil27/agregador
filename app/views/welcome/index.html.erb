@@ -1,12 +1,56 @@
-<h1>Welcome#index</h1>
-Pegue uma boa idéia, adicione bons executores o resultado será surpreendente.
-
-
-<div class="box">
+<div class="box" style="margin-top: 90px;
+background: rgba(83, 87, 95, 0.5);
+-webkit-box-shadow: 0 0 0 10px rgba(158, 148, 148, 0.5);
+-moz-box-shadow: 0 0 0 10px rgba(0,0,0,0.5);
+-o-box-shadow: 0 0 0 10px rgba(0,0,0,0.5);
+box-shadow: 0 0 0 10px rgba(83, 94, 104, 0.5);
+line-height: 91px;
+padding: 0 10px;
+font-weight: 100;">
 	<h1><span style="font-size:86px;"><%= fa_icon('lightbulb-o') %></span><span style="vertical-align: super;">&nbsp;&nbsp;&nbsp;Idéias que valem a pena!</span></h1>
 </div>
 
-<div class="box">
-	<h2><%= link_to "Login with Twitter", "/auth/twitter" %>&nbsp;<%= link_to "Login with Facebook", "/auth/facebook" %></h2>
+<div class="box" style="text-align: -webkit-center">
+<h2><mark>&nbsp;&nbsp;&nbsp;Tenha acesso à um <b>mundo</b> de boas <b>idéias</b>!&nbsp;&nbsp;&nbsp;</mark></h2>
+<div style="text-align: -webkit-center;
+padding: 10px;">
+	<%= link_to "/auth/facebook", class: "btn-auth btn-facebook large" do %>
+		Login with <b>Facebook</b>
+	<% end %>
+
+	<%= link_to "/auth/twitter", class: "btn-auth btn-twitter large" do %>
+		Login with <b>Twitter</b>
+	<% end %>
+</div>
 <%= image_tag 'preview.jpg' %>
 </div>
+
+<div class="box" style="text-align: -webkit-center">
+	<h2>Pegue uma boa <mark>idéia</mark>, adicione bons <mark>executores</mark> e surpreendasse!</h2>
+	<%= fa_icon('lightbulb-o') %>
+</div>
+
+<div class="box" style="text-align: -webkit-center">
+<div style="text-align: -webkit-center;
+padding: 10px;">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+<%= image_tag 'preview.jpg' %>
+<div style="text-align: -webkit-center;
+padding: 10px;">
+	<%= link_to "/auth/facebook", class: "btn-auth btn-facebook large" do %>
+		Login with <b>Facebook</b>
+	<% end %>
+
+	<%= link_to "/auth/twitter", class: "btn-auth btn-twitter large" do %>
+		Login with <b>Twitter</b>
+	<% end %>
+	<h2><mark>&nbsp;&nbsp;&nbsp;Tenha acesso à um <b>mundo</b> de boas <b>idéias</b>!&nbsp;&nbsp;&nbsp;</mark></h2>
+</div>
+</div>
+
