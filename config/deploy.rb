@@ -39,7 +39,7 @@ end
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 
 set :rvm_type, :user
-set :rvm_ruby_string, 'ruby-2.1.2'
+set :rvm_ruby_string, 'ruby-2.1.3'
 
 ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
