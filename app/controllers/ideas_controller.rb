@@ -1,4 +1,5 @@
 class IdeasController < ApplicationController
+  before_action :authenticate_user!
   def index
   	@ideas = Idea.all
   end
