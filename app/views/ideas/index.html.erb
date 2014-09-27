@@ -7,12 +7,10 @@
   </span>
 </div>
 
-<% @ideas.each do |idea| %>
-  <div class="idea" onmouseover="this.className='idea-hover'" onmouseout="this.className='idea'">
-    <div class="content">
-      <h2><%= link_to idea.title, idea_path(idea) %></h2>
-      <p><%= link_to truncate(idea.description, length: 300), idea_path(idea), class: 'idea-text' %></p>
-      <span class="heart" style="font-size:25px;"><%= fa_icon('heart') %></span>
-    </div>
-  </div>
+<%= render @ideas %>
+
+<% unless @ideas.current_page == @ideas.total_pages %>
+  <p id="view-more">
+    <%= link_to('View More', url_for(page: @ideas.current_page + 1)) %>
+  </p>
 <% end %>
