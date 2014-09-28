@@ -6,5 +6,7 @@
     Compartilhe: <%= fa_icon('facebook') %>&nbsp;<%= fa_icon('twitter') %>
   </span>
 </div>
-
+<div id="ideas">
 <%= render @ideas %>
+</div>
+<%= button_to 'Load More', '/ideas/index.js', method: 'get', remote: true %>
