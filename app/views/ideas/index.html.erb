@@ -6,12 +6,5 @@
     Compartilhe: <%= fa_icon('facebook') %>&nbsp;<%= fa_icon('twitter') %>
   </span>
 </div>
-<div id="content"> <%= render @ideas %>
-</div>
 
-<script type="text/javascript">
-	window.progressPage = 1;
-</script>
-<div class="actions">
-	<%= button_to 'load More', '/ideas/index.js', method: 'get', remote: true, id: '#btn-load-more' %>
-</div>
+<%= render @ideas %>
