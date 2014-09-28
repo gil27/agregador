@@ -1,7 +1,18 @@
 <div class="idea" onmouseover="this.className='idea-hover'" onmouseout="this.className='idea'">
   <div class="content">
-    <h2><%= link_to idea.title, idea_path(idea) %></h2>
+    <div>
+    	<h2 style="display:inline-block;"><%= link_to idea.title, idea_path(idea) %></h2>
+  	</div>
     <p><%= link_to truncate(idea.description, length: 300), idea_path(idea), class: 'idea-text' %></p>
-    <span class="heart" style="font-size:25px;"><%= fa_icon('heart') %></span>
+    
+    <div style="float:right; font-size:25px;">
+    	<span id="<%= dom_id(idea) %>" style=""><%= idea.votes.count %></span>
+    	&nbsp;
+    	<span class="heart <%= dom_id(idea) %>" style="font-weight: bold;">
+	    	<%= link_to vote_path(idea: idea.id), remote: true do %>
+	    		<%= fa_icon('heart') %>
+	    	<% end %>
+	  	</span>
+  	</div>
   </div>
 </div>

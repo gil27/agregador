@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'welcome' => 'welcome#index'
 
+  get 'vote' => 'votes#vote', as: :vote
+
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'signout', to: 'sessions#destroy', as: 'signout'
   get 'auth/failure', to: redirect('/welcome')

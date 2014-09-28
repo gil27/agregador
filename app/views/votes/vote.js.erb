@@ -1,0 +1,1 @@
+$("#idea_<%= params[:idea] %>").text("<%= Idea.find(params[:idea]).votes.count %>")

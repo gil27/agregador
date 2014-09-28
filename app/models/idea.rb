@@ -1,4 +1,6 @@
 class Idea < ActiveRecord::Base
+  has_many :votes
+
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
