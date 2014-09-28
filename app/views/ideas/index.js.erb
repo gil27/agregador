@@ -1,7 +1,1 @@
-elementOffset = $('#ideas')
 $('#ideas').append("<%=j render @ideas %>")
-updateProjectSections(elementOffset)
-
-<% unless @ideas.next_page %>
-  $('.loading').remove()
-<% end %>
