@@ -9,4 +9,7 @@
 <div id="ideas">
 <%= render @ideas %>
 </div>
-<%= button_to 'Load More', '/ideas/index.js', method: 'get', remote: true %>
+
+<div class="loading">
+Loading...
+</div>
