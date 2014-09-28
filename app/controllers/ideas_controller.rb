@@ -2,6 +2,11 @@ class IdeasController < ApplicationController
   before_action :authenticate_user!
   def index
   	@ideas = Idea.all.paginate(params[:page])
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new
