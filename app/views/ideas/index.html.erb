@@ -7,10 +7,13 @@
   </span>
 </div>
 
+<div id="content">
 <%= render @ideas %>
+</div>
 
-<% unless @ideas.current_page == @ideas.total_pages %>
-  <p id="view-more">
-    <%= link_to('View More', url_for(page: @ideas.current_page + 1)) %>
-  </p>
-<% end %>
+<script type="text/javascript">
+	window.progressPage = 1;
+</script>
+<div class="actions">
+	<%= button_to 'load More', '/ideas/index.js', method: 'get', remote: true, id: '#btn-load-more' %>
+</div>

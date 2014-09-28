@@ -1,8 +1,1 @@
-// views/ideas/index.js.erb
-$('.box:last').append("<%=j render(partial: 'idea', collection: @ideas, format: 'html') %>");
-
-<% if @ideas.current_page == @ideas.total_pages %>
-  $('#view-more').remove();
-<% else %>
-  $('#view-more a').attr('href', '<%= url_for(page: @ideas.current_page + 1) %>');
-<% end %>
+console.log("gil");
