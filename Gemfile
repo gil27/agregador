@@ -19,4 +19,3 @@ gem 'capistrano', '2.15.5', group: :development
 gem 'rvm-capistrano'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
-gem 'scrollinity'

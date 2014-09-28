@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
-//= require scrollinity
+//= require jquery.infinitescroll
 //= require_tree .
