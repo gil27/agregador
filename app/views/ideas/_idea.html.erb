@@ -6,12 +6,10 @@
     <p><%= link_to truncate(idea.description, length: 300), idea_path(idea), class: 'idea-text' %></p>
     
     <div style="float:right; font-size:25px;">
-    	<span id="<%= dom_id(idea) %>" style=""><%= idea.votes.count %></span>
+    	<span id="<%= dom_id(idea) %>" style=""><%= total_of_votes(idea) %></span>
     	&nbsp;
     	<span class="heart <%= dom_id(idea) %>" style="font-weight: bold;">
-	    	<%= link_to vote_path(idea: idea.id), remote: true do %>
-	    		<%= fa_icon('heart') %>
-	    	<% end %>
+	    	<%= link_to_vote(idea) %>
 	  	</span>
   	</div>
   </div>

@@ -1,1 +1,2 @@
 $("#idea_<%= params[:idea] %>").text("<%= Idea.find(params[:idea]).votes.count %>")
+$(".idea_<%= params[:idea] %> > a > i.fa.fa-heart").css("color", "#E84F60")

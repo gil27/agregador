@@ -13,4 +13,8 @@ class Idea < ActiveRecord::Base
   def to_param
 		"#{id}-#{title.parameterize}"
 	end
+
+  def voted_by? user
+    votes.where(user_id: user.id).any?
+  end
 end
