@@ -1,6 +1,6 @@
 <div class="box" style="text-align:center;">
     <h1><span style="font-size:46px;"><%= fa_icon('lightbulb-o') %></span><span style="vertical-align: text-top;">&nbsp;&nbsp;&nbsp;<%= @idea.title %></span></h1>
-    <%= link_to "Entre em contato com o autor #{fa_icon('comments-o')}".html_safe, '#', style: 'color:#000;' %>
+    <%= link_to "Entre em contato com o autor #{fa_icon('comments-o')}".html_safe, '#', style: 'color:#000;', data: {toggle: "modal", target:"#myModal"} %>
 </div>
 <div class="box about">
 	<%= simple_format(@idea.description) %>
@@ -21,4 +21,32 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Informações de contato</h4>
+      </div>
+      <div class="modal-body">
+      <table>
+        <tbody>
+          <tr>
+              <th><%= fa_icon('twitter')%>&nbsp; Twitter: <%= @idea.twitter %></th>
+              <th><%= fa_icon('facebook')%>&nbsp; Facebook: <%= @idea.facebook %></th>
+              <th><%= fa_icon('send-o')%>&nbsp; Email: <%= @idea.email %></th>
+              <th><%= fa_icon('phone')%>&nbsp; Telefone: <%= @idea.telefone %></th>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
