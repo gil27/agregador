@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'execute' => 'ideas#execute'
   root 'ideas#index'
 
-  get 'minhas-ideias' => 'user#ideas', as: :user_ideas
+  get 'minhas-ideias' => 'ideas#ideas', as: :user_ideas
 
   get 'welcome' => 'welcome#index'
 
