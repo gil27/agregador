@@ -10,7 +10,7 @@ class IdeasController < ApplicationController
   end
 
   def ideas
-    @ideas = Idea.all.paginate(params[:page])
+    @ideas = current_user.ideas.order('created_at desc').paginate(params[:page])
 
     respond_to do |format|
       format.html
@@ -19,7 +19,7 @@ class IdeasController < ApplicationController
   end
 
   def new
-  	@idea = Idea.new
+  	@idea = current_user.ideas.build
   end
 
   def create
@@ -34,6 +34,6 @@ class IdeasController < ApplicationController
   private
 
   def idea_params
-    params.require(:idea).permit(:title, :description, :email, :telefone, :twitter, :facebook)
+    params.require(:idea).permit(:title, :description, :email, :telefone, :twitter, :facebook, :user_id)
   end
 end

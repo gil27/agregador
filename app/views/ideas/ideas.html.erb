@@ -1,0 +1,12 @@
+<div class="box">
+  <h1>Boas idéias mudam o mundo&nbsp;<%= fa_icon('lightbulb-o') %></h1>
+  <b><i><span class="left text-left"><mark>&nbsp;&nbsp;<%= fa_icon('lightbulb-o') %>&nbsp;Tire suas idéias do papel.&nbsp;&nbsp;</mark></span></i></b>
+
+  <span class="right text-right">
+    Compartilhe: <%= fa_icon('facebook') %>&nbsp;<%= fa_icon('twitter') %>
+  </span>
+</div>
+<div id="ideas">
+<%= render @ideas %>
+</div>
+<%= paginate @ideas %>

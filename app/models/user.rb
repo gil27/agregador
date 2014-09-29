@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	validates_uniqueness_of :uid
-
+	has_many :ideas
 	has_many :votes
 
 	def self.create_from_omniauth(omniauth)
