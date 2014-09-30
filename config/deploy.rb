@@ -27,6 +27,7 @@ namespace :deploy do
 
   task :database, :roles => :app do
     run "cp #{deploy_to}/shared/database.yml #{release_path}/config/"
+    run "cd #{release_path}; bundle exec rake db:migrate RAILS_ENV=production"
   end
 
   task :secrets, :roles => :app do
