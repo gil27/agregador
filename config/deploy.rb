@@ -31,7 +31,7 @@ namespace :deploy do
   end
 
   task :secrets, :roles => :app do
-    run "cp #{deploy_to}/shared/secrets.yml #{release_path}/config/initializers/"
+    run "cp #{deploy_to}/shared/secrets.yml #{release_path}/config/"
   end
 
   task :omniauth, :roles => :app do
