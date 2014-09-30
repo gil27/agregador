@@ -34,12 +34,20 @@
       </div>
       <div class="modal-body">
       <table>
+        <thead>
+          <tr>
+              <th style="width: 130px;"><%= fa_icon('twitter')%>&nbsp;Twitter:</th>
+              <th style="width: 150px;"><%= fa_icon('facebook')%>&nbsp;Facebook:</th>
+              <th style="width: 200px;"><%= fa_icon('send-o')%>&nbsp; Email:</th>
+              <th style="width: 100px;"><%= fa_icon('phone')%>&nbsp; Telefone:</th>
+          </tr>
+        </thead>
         <tbody>
           <tr>
-              <th><%= fa_icon('twitter')%>&nbsp; Twitter: <%= @idea.twitter %></th>
-              <th><%= fa_icon('facebook')%>&nbsp; Facebook: <%= @idea.facebook %></th>
-              <th><%= fa_icon('send-o')%>&nbsp; Email: <%= @idea.email %></th>
-              <th><%= fa_icon('phone')%>&nbsp; Telefone: <%= @idea.telefone %></th>
+            <th style="width: 130px;"><%= @idea.twitter %></th>
+            <th style="width: 150px;"><%= @idea.facebook %></th>
+            <th style="width: 200px;"><%= @idea.email %></th>
+            <th style="width: 100px;"><%= @idea.telefone %></th>
           </tr>
         </tbody>
       </table>
