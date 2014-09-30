@@ -22,13 +22,19 @@ namespace :deploy do
   end
 
   task :bundleinstall, :roles => :app do
-    run "cd #{release_path}; bundle exec rake db:create RAILS_ENV=production"
-    puts "created"
-    run "cd #{release_path}; bundle exec rake db:migrate RAILS_ENV=production"
-    puts "migration"
-    run "cd #{release_path}; bundle exec rake db:seed RAILS_ENV=production"
-    puts "seed"
     run "cd #{release_path}; bundle exec bundle install"
+  end
+
+  task :database, :roles => :app do
+    run "cp #{deploy_to}/shared/database.yml #{release_path}/config/"
+  end
+
+  task :database, :roles => :app do
+    run "cp #{deploy_to}/shared/secrets.yml #{release_path}/initializers/"
+  end
+
+  task :omniauth, :roles => :app do
+    run "cp #{deploy_to}/shared/omniauth.rb #{release_path}/config/initializers/"
   end
 
   task :rvmrc, :roles => :app do
@@ -46,4 +52,5 @@ ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
 
 #after :deploy, 'deploy:jekyll'
-after 'deploy:update_code', 'deploy:bundleinstall', "deploy:restart"
+after 'deploy:update_code', 'deploy:bundleinstall', "deploy:restart", "deploy:database"
+after "deploy:database", "deploy:omniauth"
