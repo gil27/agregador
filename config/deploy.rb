@@ -29,7 +29,7 @@ namespace :deploy do
     run "cp #{deploy_to}/shared/database.yml #{release_path}/config/"
   end
 
-  task :database, :roles => :app do
+  task :secrets, :roles => :app do
     run "cp #{deploy_to}/shared/secrets.yml #{release_path}/initializers/"
   end
 
@@ -52,5 +52,4 @@ ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
 
 #after :deploy, 'deploy:jekyll'
-after 'deploy:update_code', 'deploy:bundleinstall', "deploy:restart", "deploy:database"
-after "deploy:database", "deploy:omniauth"
+after 'deploy:update_code', 'deploy:bundleinstall',  "deploy:database", "deploy:omniauth", "deploy:secrets", "deploy:restart"
