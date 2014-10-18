@@ -1,54 +1,87 @@
-<div class="box" style="margin-top: 90px;
-background: rgba(83, 87, 95, 0.5);
--webkit-box-shadow: 0 0 0 10px rgba(158, 148, 148, 0.5);
--moz-box-shadow: 0 0 0 10px rgba(0,0,0,0.5);
--o-box-shadow: 0 0 0 10px rgba(0,0,0,0.5);
-box-shadow: 0 0 0 10px rgba(83, 94, 104, 0.5);
-line-height: 91px;
-padding: 0 10px;
-font-weight: 100;">
-	<h1><span style="font-size:86px;"><%= fa_icon('lightbulb-o') %></span><span style="vertical-align: super;">&nbsp;&nbsp;&nbsp;Idéias que valem a pena!</span></h1>
-</div>
+<section class="white">
+	<div class="col-lg-12">
+		<div class="container">
+			<div class="row">
+				<div class="text col-sm-7">
+					<h1 class="big-text">Tenha acesso à um <b>mundo</b> de boas <b>ideias</b>.</h1>
+					<div class="center" style="padding: 10px;">
+						<%= link_to "/auth/facebook", class: "btn-auth btn-facebook large" do %>
+							Login com <b>Facebook</b>
+						<% end %>
 
-<div class="box" style="text-align: -webkit-center">
-<h2><mark>&nbsp;&nbsp;&nbsp;Tenha acesso à um <b>mundo</b> de boas <b>idéias</b>!&nbsp;&nbsp;&nbsp;</mark></h2>
-<div style="text-align: -webkit-center;
-padding: 10px;">
-	<%= link_to "/auth/facebook", class: "btn-auth btn-facebook large" do %>
-		Login with <b>Facebook</b>
-	<% end %>
+						<%= link_to "/auth/twitter", class: "btn-auth btn-twitter large" do %>
+							Login com <b>Twitter</b>
+						<% end %>
+					</div>
+				</div>
+				<div class="illustration col-sm-4 col-sm-offset-1">
+					<h1 class="big-lamp"><%= fa_icon('lightbulb-o') %></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-	<%= link_to "/auth/twitter", class: "btn-auth btn-twitter large" do %>
-		Login with <b>Twitter</b>
-	<% end %>
-</div>
-<%= image_tag 'preview.jpg', class: 'img-responsive' %>
-</div>
+<section class="orange">
+	<div class="col-lg-12">
+		<div class="container">
+			<div class="row">
+				<div class="illustration col-sm-4 col-sm-offset-1">
+					<h1 class="big-lamp"><%= fa_icon('lightbulb-o') %></h1>
+				</div>
+				<div class="text col-sm-7">
+					<h1 class="big-text">Grandes <b>ideias merecem</b> sair do papel.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<div class="center" style="padding: 10px;">
+						<%= link_to "/auth/facebook", class: "btn-auth btn-facebook large" do %>
+							Login com <b>Facebook</b>
+						<% end %>
 
-<div class="box" style="text-align: -webkit-center">
-	<h2>Pegue uma boa <mark>idéia</mark>, adicione bons <mark>executores</mark> e surpreenda-se!</h2>
-	<%= fa_icon('lightbulb-o') %>
-</div>
+						<%= link_to "/auth/twitter", class: "btn-auth btn-twitter large" do %>
+							Login com <b>Twitter</b>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-<div class="box" style="text-align: -webkit-center">
-<div style="text-align: -webkit-center;
-padding: 10px;">
-	Com o agregador de ideias é muito simples de tirar suas idéias do papel.
-	Cadastre suas idéias informe como executores podem entrar em contato e pronto. Você já deu o primeiro passo para transformar um sonho em realidade.
+<section class="blue">
+	<div class="col-lg-12">
+		<div class="container">
+			<div class="row">
+				<h1 class="text-center"><b>SONHE</b>, compartilhe, <b>EXECUTE</b></h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<center><%= image_tag 'preview.png', class: 'img-responsive' %></center>
+			</div>
+		</div>
+	</div>
+</section>
 
-	Gostou de uma idéia? Vote, comente, entre em contato com o autor e à transforme em realidade
-</div>
-<%= image_tag 'preview2.jpg', class: 'img-responsive' %>
-<div style="text-align: -webkit-center;
-padding: 10px;">
-	<%= link_to "/auth/facebook", class: "btn-auth btn-facebook large" do %>
-		Login with <b>Facebook</b>
-	<% end %>
+<section class="pink">
+	<div class="col-lg-12">
+		<div class="container">
+			<div class="row">
+				<h1 class="text-center">Participe</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<center><%= image_tag 'preview2.jpg', class: 'img-responsive' %></center>
+			</div>
+		</div>
+	</div>
+</section>
 
-	<%= link_to "/auth/twitter", class: "btn-auth btn-twitter large" do %>
-		Login with <b>Twitter</b>
-	<% end %>
-	<h2><mark>&nbsp;&nbsp;&nbsp;Gente boa que transforma o <b>mundo</b> com boas <b>idéias</b>!&nbsp;&nbsp;&nbsp;</mark></h2>
-</div>
-</div>
-
+<footer>
+	<center><h2><mark>&nbsp;&nbsp;&nbsp;Gente boa que transforma o <b>mundo</b> com boas <b>idéias</b>!&nbsp;&nbsp;&nbsp;</mark></h2></center>
+</footer>

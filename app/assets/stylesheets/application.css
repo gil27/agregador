@@ -11,6 +11,9 @@
  * file per style scope.
  *
  *= require font-awesome
- *= require_tree .
+ *= require bootstrap_and_overrides
+ *= require welcome
+ *= require auth-buttons.css
+ *= reqyure tree .
  *= require_self
  */
