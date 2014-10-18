@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:execute, :about]
   def index
   	@ideas = Idea.all.order('created_at desc').paginate(params[:page])
 
