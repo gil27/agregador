@@ -11,7 +11,10 @@ class User < ActiveRecord::Base
 			oauth_token: omniauth['info']['token']
 		)
 
-		user.update(image: omniauth['info']['image'] ||= "profile/grey-lamp.png")
+		user.update(
+			image: omniauth['info']['image'] ||= "profile/grey-lamp.png",
+			location: omniauth['info']['location']
+		)
 		user
 	end
 end

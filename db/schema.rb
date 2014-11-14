@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113233523) do
+ActiveRecord::Schema.define(version: 20141114004613) do
 
   create_table "ideas", force: true do |t|
     t.string   "title"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20141113233523) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image",            default: "./image"
+    t.string   "location"
   end
 
   create_table "votes", force: true do |t|
