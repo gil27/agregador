@@ -101,12 +101,18 @@ h2 a, a:hover{
 }
 
 footer{
-	color: #fccc28;
-	background-color: #2B7718;
+	background-color: #222222;
 	padding: 18px;
 	border-top-style: solid;
-	border-top-color: #fccc28;
-	border-width: 2px;
+	border-top-color: #428BCA;
+	border-width: 4px;
+	height: 121px;
+}
+
+footer mark{
+	color: #FFF;
+	background: #428BCA;
+	vertical-align: middle;
 }
 
 footer h2{
