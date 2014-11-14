@@ -5,7 +5,7 @@
   	</div>
     <p><%= link_to truncate(idea.description, length: 300), idea_path(idea), class: 'idea-text' %></p>
     
-    <div style="display:inline-block;"><%= image_tag current_user.image, class: 'img-circle' %></div>
+    <div style="display:inline-block;"><%= image_tag idea.user.image, class: 'img-circle' %></div>
     <div style="float:right; font-size:25px; display:'inline-block';">
     	<span id="<%= dom_id(idea) %>" style=""><%= total_of_votes(idea) %></span>
     	&nbsp;
