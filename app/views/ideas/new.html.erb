@@ -1,15 +1,15 @@
 <div class="box">
-  <h1>Compartilhe sua idéia!</h1>
+  <h1>Compartilhe sua Ideia!</h1>
 </div>
 <div class="box" style="padding:50px;">
   <div class="row">
     <%= form_for @idea, :html => { :class => 'form-horizontal' } do |f| %>
       <div class="col-md-5">
-        <h2><mark>&nbsp;Sua idéia&nbsp;</mark></h2>
+        <h2><mark>&nbsp;Sua Ideia&nbsp;</mark></h2>
         <div class="form-group">
           <%= f.label 'Título' %>
           <div class="controls">
-            <%= f.text_field :title, :class => 'form-control', placeholder: 'Título da Idéia' %>
+            <%= f.text_field :title, :class => 'form-control', placeholder: 'Título da Ideia' %>
           </div>
         </div>
 

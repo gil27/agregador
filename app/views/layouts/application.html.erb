@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Agregador de Idéias - Get ideas done." %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Agregador de Ideias - Get ideas done." %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -27,12 +27,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to "+ Idéias", root_path, class: 'navbar-brand' %>
+        <%= link_to "+ Ideias", root_path, class: 'navbar-brand' %>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <% if current_user %>
               <li><%= link_to "Nova Idéia", new_idea_path  %></li>
-              <li><%= link_to "Minhas Idéias", user_ideas_path  %></li>
+              <li><%= link_to "Minhas Ideias", user_ideas_path  %></li>
             <% end %>
             <li><%= link_to "Faça", execute_path  %></li>
             <li><%= link_to "Sobre", sobre_path  %></li>
