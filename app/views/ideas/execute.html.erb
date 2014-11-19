@@ -1,4 +1,5 @@
 <%= content_for(:title){ 'Faça! - Agregador de Ideias' } %>
+<% cache :execute do %>
 <div class="box">
 	<h1><span style="font-size:46px;"><%= fa_icon('lightbulb-o') %></span><span style="vertical-align: text-top;">&nbsp;&nbsp;&nbsp;Faça!</span></h1>
 </div>
@@ -8,7 +9,7 @@
 			Ok, pessoas gostaram da sua ideia ou você encontrou a ideia certa para executar. Mas por onde começar? como se organizar? Afinal, #comofaz?
 		</p>
 		<hr />
-		<h2>The golden circle</h2>
+		<h2><%= fa_icon('lightbulb-o') %>  The golden circle</h2>
 		<p>
 			<b>Why (Porque?)</b> - Defina um próposito. O que te inspira a executar esta ideia? Descubra o que te move
 		</p>
@@ -18,11 +19,14 @@
 		<p>
 			<b>What (O que?)</b> - O que você fará para alcançar seu propósito? Você vai desenvolver um aplicativo? Escrever um livro? O que você irá fazer para alcançar seus objetivos?
 		</p>
-		<p><%= link_to 'Para saber mais do golden circle assista a este vídeo do TED', url_for("http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action") %>
-
+		<p>
 			<center><%= image_tag('WhyWhatHow.jpg', width:'300px', height:'300px', style: 'align:center;', class: 'img-responsive') %></center>
 		</p>
-		<h2>Tenha um plano</h2>
+		<p>
+			<center><iframe src="https://embed-ssl.ted.com/talks/simon_sinek_how_great_leaders_inspire_action.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></center>
+		</p>
+
+		<h2><%= fa_icon('lightbulb-o') %>  Tenha um plano</h2>
 		<p>
 			Não vá com muita sede ao pote. Monte um passo a passo para alcançar o sucesso na execução.
 		</p>
@@ -38,13 +42,15 @@
 		<p>Desta forma temos nove atitudes a serem tomadas para alcançarmos nossos objetivos e metas.</p>
 		<p>É hora de organizar e gerenciar nossas tarefas</p>
 		<center><iframe width="560" height="315" src="//www.youtube.com/embed/w7obJLSd-KQ" frameborder="0" allowfullscreen></iframe></center>
-		<h2>Trello</h2>
+		<h2><%= fa_icon('lightbulb-o') %>  Trello</h2>
 		<p>
 			O Trello é uma ferramenta sensacional. Muito boa para gerenciar e visualizar o andamento de suas tarefas. Você pode se cadastrar por este link: <%= link_to 'trello.com', url_for("https://trello.com/gil27/recommend") %>
 		</p>
-		<h2>Mão na massa!</h2>
+		<h2><%= fa_icon('lightbulb-o') %>  Mão na massa!</h2>
 		<p>
 			Agora que temos tudo organizado e bem definido é hora de executarmos. Por isso, mãos na massa e nos conte depois os resultados.
 		</p>
 	</div>
 </div>
+
+<% end %>
