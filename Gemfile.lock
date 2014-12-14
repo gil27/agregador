@@ -1,14 +1,3 @@
-GIT
-  remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 1d93c5a77049b3d21d17c847ad0531d7714fa229
-  ref: bootstrap3
-  specs:
-    twitter-bootstrap-rails (3.1.1)
-      actionpack (>= 3.1)
-      execjs
-      rails (>= 3.1)
-      railties (>= 3.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,6 +27,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.4.2)
+      activerecord (>= 3.2, < 5)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     capistrano (2.15.5)
@@ -171,6 +162,11 @@ GEM
     tilt (1.4.1)
     turbolinks (2.5.3)
       coffee-rails
+    twitter-bootstrap-rails (3.2.0)
+      actionpack (~> 4.1)
+      execjs (~> 2.2)
+      rails (~> 4.1)
+      railties (~> 4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.6.0)
@@ -181,6 +177,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 3.4)
   capistrano (= 2.15.5)
   coffee-rails (~> 4.0.0)
   elasticsearch-model
@@ -199,5 +196,5 @@ DEPENDENCIES
   spring
   sqlite3
   turbolinks
-  twitter-bootstrap-rails!
+  twitter-bootstrap-rails
   uglifier (>= 1.3.0)

@@ -1,7 +1,11 @@
 class IdeasController < ApplicationController
   before_action :authenticate_user!, except: [:execute, :about]
   def index
-  	@ideas = Idea.all.order('created_at desc').paginate(params[:page])
+    if params[:tag]
+      @ideas = Idea.tagged_with(params[:tag]).order('created_at desc').paginate(params[:page])
+    else
+      @ideas = Idea.all.order('created_at desc').paginate(params[:page])
+    end
 
   	respond_to do |format|
   		format.html
@@ -34,6 +38,6 @@ class IdeasController < ApplicationController
   private
 
   def idea_params
-    params.require(:idea).permit(:title, :description, :email, :telefone, :twitter, :facebook, :user_id)
+    params.require(:idea).permit(:title, :description, :email, :telefone, :twitter, :facebook, :user_id, :tag_list)
   end
 end

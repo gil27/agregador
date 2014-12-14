@@ -1,6 +1,7 @@
 <div class="box" style="text-align:center;">
     <h1><span style="font-size:46px;"><%= fa_icon('lightbulb-o') %></span><span style="vertical-align: text-top;">&nbsp;&nbsp;&nbsp;<%= @idea.title %></span></h1>
-    <%= link_to "Entre em contato com o autor #{fa_icon('comments-o')}".html_safe, '#', style: 'color:#000;', data: {toggle: "modal", target:"#myModal"} %>
+    <%= link_to "Entre em contato com o autor #{fa_icon('comments-o')}".html_safe, '#', style: 'color:#000;', data: {toggle: "modal", target:"#myModal"} %><br />
+    <small>Tags: <%= raw @idea.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></small>
 </div>
 <div class="box about">
 	<%= simple_format(@idea.description) %>

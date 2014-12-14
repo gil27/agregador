@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'ideas/index'
+  get 'tags/:tag', to: "ideas#index", as: :tag
   resources :ideas
   resources :users, only: :show
   get 'sobre' => 'ideas#about'
