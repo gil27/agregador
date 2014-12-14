@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20141114004613) do
     t.integer  "user_id"
   end
 
-  add_index "ideas", ["user_id"], name: "index_ideas_on_user_id"
+  add_index "ideas", ["user_id"], name: "index_ideas_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "provider"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20141114004613) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image",            default: "./image"
+    t.string   "image",            default: "profile/grey-lamp.png"
     t.string   "location"
   end
 
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20141114004613) do
     t.datetime "updated_at"
   end
 
-  add_index "votes", ["idea_id"], name: "index_votes_on_idea_id"
-  add_index "votes", ["user_id"], name: "index_votes_on_user_id"
+  add_index "votes", ["idea_id"], name: "index_votes_on_idea_id", using: :btree
+  add_index "votes", ["user_id"], name: "index_votes_on_user_id", using: :btree
 
 end
