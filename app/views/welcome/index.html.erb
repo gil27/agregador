@@ -1,72 +1,113 @@
-<section class="white">
-	<div class="col-lg-12">
-		<div class="container">
-			<div class="row">
-				<div class="text col-sm-7">
-					<h1 class="bigger-text">Tenha acesso à um <b>mundo</b> de boas <b>ideias</b>.</h1>
-					<div class="center" style="padding: 10px;">
-						<%= link_to "/auth/facebook" do %>
-							<button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Login com Facebook</button>
-						<% end %>
-
-						<%= link_to "/auth/twitter" do %>
-							<button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Login com Twitter</button>
-						<% end %>
-					</div>
-				</div>
-				<div class="illustration col-sm-4 col-sm-offset-1">
-					<h1 class="bigger-lamp"><%= fa_icon('lightbulb-o') %></h1>
-				</div>
-			</div>
-		</div>
-	</div>
+<!--Header-->
+<section id="header">
+  <div class="container">
+    <div class="row header-text">
+      <div class="col-sm-8 pull-right text-right">
+       <div class="margin-100">
+        <h1>Agregador de Ideias,</h1>
+        <h3>Tenha acesso à um mundo de <strong><em>boas ideias!</em></strong></h3>
+       </div>
+        <a href="#message" class="btn btn-primary btn-lg">Participe <%= fa_icon("heart") %></a>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-4 text-center wow fadeInUp">
+        <%= image_tag "colorized-lightbulb/orange-lamp.png", class: "header-img", alt: "Header Image" %>
+      </div>
+    </div>
+    
+  </div>
 </section>
 
-<section class="orange">
-	<div class="col-lg-12">
-		<div class="container">
-			<div class="row">
-				<div class="illustration col-sm-4 col-sm-offset-1">
-					<h1 class="big-lamp"><%= fa_icon('lightbulb-o') %></h1>
-				</div>
-				<div class="text col-sm-7">
-					<h1 class="big-text">Grandes <b>ideias merecem</b> sair do papel.</h1>
-					<p></p>
-					<div class="center" style="padding: 10px;">
-						<%= link_to "/auth/facebook" do %>
-							<button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Login com Facebook</button>
-						<% end %>
-
-						<%= link_to "/auth/twitter" do %>
-							<button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Login com Twitter</button>
-						<% end %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!--Main 1-->
+<section id="main1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 margin-30">
+        <h2>Grandes ideias merecem sair do papel</h2><br />
+        <p>Sabe aquelas ideias: "poderia ter um livro sobre x, e se tivesse um lugar y, ou um site w" essas ideias que a gente tem que seriam super legais mas acaba deixando pra lá! Pois bem, o agregadordeideias.com, é o lugar para divulgar suas ideias para que pessoas com as habilidades necessárias possam te ajudar a executar, tirar esta ideia do papel, fazer acontecer e transforma a vida de muita gente. </p><br />
+        <blockquote>
+          Teve uma ideia mas não sabe nem por onde começar? Obtenha feedback e apoio para executar suas ideias mais mirabolantes. Gostou de alguma ideia, quer ajudar a executar? Entre em contato com o autor e bote a mão na massa. Nós te ajudamos a organizar e executar sua ideia. Confira nossa página de execução.
+        </blockquote>
+        <br />
+        <a href="#message" class="btn btn-secondary btn-lg">Participe <%= fa_icon("heart") %></a>
+      </div>
+      
+      <div class="col-sm-6 wow fadeInUpBig">
+        <%= image_tag "colorized-lightbulb/lightblue-lamp.png", class: "main1-img img-responsive pull-right", alt: "Main1 Image" %>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="blue">
-	<div class="col-lg-12">
-		<div class="container">
-			<div class="row">
-				<h1 class="text-center"><b>SONHE</b>, compartilhe, <b>EXECUTE</b></h1>
-				<p>Sabe aquelas ideias: "poderia ter um livro sobre x, e se tivesse um lugar y, ou um site w" essas ideias que a gente tem que seriam super legais mas acaba deixando pra lá! Pois bem, o agregadordeideias.com, é o lugar para divulgar suas ideias para que pessoas com as habilidades necessárias possam te ajudar a executar, tirar esta ideia do papel, fazer acontecer e transforma a vida de muita gente.</p>
-				<center><%= image_tag 'preview.png', class: 'img-responsive' %></center>
-			</div>
-		</div>
-	</div>
+<!--Main 2-->
+<section id="main2">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-sm-6 wow fadeInUpBig">
+        <%= image_tag "main2.png", class: "main2-img pull-left", alt: "Main2 Image" %>
+      </div>
+    
+      <div class="col-sm-6 margin-30">
+        <h2>Gente boa transforma o mundo com boas ideias</h2><br />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p><br />
+        
+        <br />
+        <a href="#message" class="btn btn-secondary btn-lg">Participe <%= fa_icon("heart") %></a>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section class="pink">
-	<div class="col-lg-12">
-		<div class="container">
-			<div class="row">
-				<h1 class="text-center"><b>FAÇA PARTE</b></h1>
-				<p>Teve uma ideia mas não sabe nem por onde começar? Obtenha feedback e apoio para executar suas ideias mais mirabolantes. Gostou de alguma ideia, quer ajudar a executar? Entre em contato com o autor e bote a mão na massa. Nós te ajudamos a organizar e executar sua ideia. Confira nossa página de execução.</p>
-				<center><%= image_tag 'preview2.jpg', class: 'img-responsive' %></center>
-			</div>
-		</div>
-	</div>
+<!--Message-->
+<section id="message">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2 class="white">Faça Parte</h2>
+        <%= link_to "/auth/facebook", class: "btn btn-primary btn-lg" do %>
+          Facebook&nbsp;<%= fa_icon("facebook") %>
+        <% end %>
+
+        <%= link_to "/auth/twitter", class: "btn btn-primary btn-lg" do %>
+          Twitter&nbsp;<%= fa_icon("twitter") %>        
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Bottom-->
+<section id="bottom">
+  <div class="container">
+    
+    <div class="row margin-40">
+      <div class="col-sm-12 text-center">
+        <ul class="list-inline social">
+          <li class="wow slideInLeft" data-wow-delay="0.3s"><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>
+          <li class="wow slideInLeft" ><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+          <li class="wow slideInRight" ><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+          <li class="wow slideInRight" data-wow-delay="0.3s"><a href="#"><i class="fa fa-github fa-2x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <p><strong><em>Faça Parte:</em></strong></p>
+        <%= link_to "/auth/facebook", class: "btn btn-secondary btn-lg" do %>
+          Facebook&nbsp;<%= fa_icon("facebook") %>
+        <% end %>
+
+        <%= link_to "/auth/twitter", class: "btn btn-secondary btn-lg" do %>
+          Twitter&nbsp;<%= fa_icon("twitter") %>        
+        <% end %>
+      </div>
+    </div>
+    
+  </div>
 </section>
