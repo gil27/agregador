@@ -10,11 +10,7 @@
 /* ==========================================================================
    Global styles
    ========================================================================== */
-h1 {
-  font-family: 'Dr Sugiyama', cursive;
-}
-
-h2, h3, p, .navbar-nav {
+h2, p, .navbar-nav {
   font-family: 'Lato', sans-serif;
 } 
 
@@ -351,7 +347,7 @@ footer {
     width: 100%;
     max-width: 600px;  
 }
-	
+  
 }
 
 /* Landscape phone to portrait tablet */
