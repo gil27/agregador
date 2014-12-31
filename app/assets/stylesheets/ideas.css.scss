@@ -34,8 +34,7 @@ body {
 }
 
 .idea{
-	background: asset-url('lamp.png') no-repeat;
-	background-position-y: center;
+	
 	background-origin: content-box;
 	background-color: #FFFFFF;
 	-moz-box-shadow: 1px 1px 5px #888;
@@ -44,13 +43,13 @@ body {
 	padding: 20px;
 	margin-bottom: 20px;
 	min-height: 170px;
+	vertical-align:middle;
 }
 
 .idea-hover{
-	background: asset-url('lamp-hover.png') no-repeat;
-	background-position-y: center;
+	
 	background-origin: content-box;
-	background-color: #FFFFFF;
+	background-color: #FFF9F4;
 	-moz-box-shadow: 1px 1px 5px #888;
 	-webkit-box-shadow: 1px 1px 5px #888;
 	box-shadow: 1px 1px 5px #888;

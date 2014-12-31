@@ -1,14 +1,13 @@
 <div class="idea" onmouseover="this.className='idea-hover'" onmouseout="this.className='idea'">
-  <div class="content">
-    <div>
-    	<h2 style="display:inline-block;"><%= link_to idea.title, idea_path(idea) %></h2>
-  	</div>
+  <div class="col-lg-1">
+    <%= image_tag idea.user.image, class: 'img-circle', style: 'margin-top: 50%;' %><br />
+    <small><%= idea.user.location %></small>
+  </div>
+  <div class="col-lg-11">
+    <h2 style=""><%= link_to idea.title, idea_path(idea) %></h2>
     <p><%= link_to truncate(idea.description, length: 300), idea_path(idea), class: 'idea-text' %></p>
     
-    <div style="display:inline-block;">
-      <%= image_tag idea.user.image, class: 'img-circle' %>&nbsp;&nbsp;<%= idea.user.location %>
-    </div>
-    <div style="float:right; font-size:25px; display:'inline-block';">
+    <div style="float:right; font-size:25px;">
     	<span id="<%= dom_id(idea) %>" style=""><%= total_of_votes(idea) %></span>
     	&nbsp;
     	<span class="heart <%= dom_id(idea) %>" style="font-weight: bold;">
@@ -16,4 +15,5 @@
 	  	</span>
   	</div>
   </div>
+  
 </div>
