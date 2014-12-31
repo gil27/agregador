@@ -27,8 +27,12 @@ class IdeasController < ApplicationController
   end
 
   def create
-  	@idea = Idea.create(idea_params)
-    redirect_to root_path, notice: 'Ideia compartilhada com sucesso!'
+  	@idea = Idea.new(idea_params)
+    if @idea.save
+      redirect_to root_path, notice: 'Ideia compartilhada com sucesso!'
+    else
+      render :new
+    end
   end
 
   def show
