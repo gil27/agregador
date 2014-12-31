@@ -3,6 +3,8 @@ class Idea < ActiveRecord::Base
   has_many :votes
   belongs_to :user
 
+  validates :title, :description, presence: true
+
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
