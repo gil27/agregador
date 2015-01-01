@@ -100,12 +100,9 @@ h2 a, a:hover{
 }
 
 footer{
-	background-color: #222222;
-	padding: 18px;
 	border-top-style: solid;
 	border-top-color: #428BCA;
 	border-width: 4px;
-	height: 121px;
 }
 
 footer mark{
@@ -122,4 +119,68 @@ a.idea-text{
 	color: #333;
 	background-color: transparent;
 	text-decoration: none;
+}
+
+/*-------------------Colors----------------*/
+.dark-gray {
+  color: #545454;
+}
+
+.light-gray {
+  color: #f4f4f4;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.green {
+  color: #13c4af;
+}
+
+.blue {
+  color: #4eacdd;
+}
+
+
+
+/* ==========================================================================
+   Navigation styles
+   ========================================================================== */
+.navbar-inverse {
+    background-color: #4eabde;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    box-shadow: 0 0px 0 rgba(0, 0, 0, 0.0) inset;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
+	color: #fff;
+  background-color: #1382BB;
 }
