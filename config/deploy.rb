@@ -49,7 +49,7 @@ set :rvm_type, :user
 set :rails_env, "production"
 set :rvm_ruby_string, 'ruby-2.1.3'
 
-ssh_options[:forward_agent] = true
+#ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
 
 #after :deploy, 'deploy:jekyll'
