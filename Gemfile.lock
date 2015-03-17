@@ -195,7 +195,7 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-twitter
   rails (= 4.1.6)
-  rails-assets-tagsinput!
+  rails-assets-tagsinput
   rvm-capistrano
   sass-rails (~> 4.0.3)
   spring
