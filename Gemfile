@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+source "https://rails-assets.org" do
+  gem 'rails-assets-tagsinput'
+end
 
 gem 'rails', '4.1.6'
 gem 'sqlite3'
@@ -22,7 +25,3 @@ gem 'rvm-capistrano'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'acts-as-taggable-on', '~> 3.4'
-
-source "https://rails-assets.org" do
-  gem 'rails-assets-tagsinput'
-end
