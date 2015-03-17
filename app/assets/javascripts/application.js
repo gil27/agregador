@@ -16,4 +16,5 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require jquery.infinitescroll
+//= require tagsinput
 //= require_tree .

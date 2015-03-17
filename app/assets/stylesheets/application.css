@@ -15,5 +15,6 @@
  *= require bootstrap_and_overrides
  *= require ideas
  *= require welcome
+ *= require tagsinput
  *= require_self
  */
