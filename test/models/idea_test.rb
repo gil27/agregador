@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class IdeaTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def test_idea_validations
+    idea = Idea.new
+    refute idea.valid?, 'Idea is invalid'
+    idea.title = 'foo'
+    idea.description = 'bar'
+    assert idea.valid?, 'Idea is valid'
+  end
 end
