@@ -20,8 +20,6 @@ gem 'elasticsearch-rails'
 gem 'twitter-bootstrap-rails'
 gem "font-awesome-rails"
 gem 'kaminari'
-gem 'capistrano', '2.15.5', group: :development
-gem 'rvm-capistrano'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'acts-as-taggable-on', '~> 3.4'
