@@ -16,4 +16,4 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require jquery.infinitescroll
-//= require_tree web-theme/
+//= require_tree ../../../vendor/assets/javascripts/web-theme/
