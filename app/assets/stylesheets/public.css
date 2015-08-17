@@ -11,10 +11,7 @@
  * file per style scope.
  *
  *= require font-awesome
- *= require animate
  *= require bootstrap_and_overrides
- *= require ideas
- *= require main
- *= require welcome
+ *= require startup
  *= require_self
  */

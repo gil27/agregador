@@ -1,112 +1,84 @@
-<!--Header-->
-<section id="header">
-  <div class="container">
-    <div class="row header-text">
-      <div class="col-sm-8 pull-right text-right">
-       <div class="margin-100">
-        <h1>Agregador de Ideias,</h1>
-        <h3>Tenha acesso à um mundo de <strong><em>boas ideias!</em></strong></h3>
-       </div>
-        <a href="#message" class="btn btn-primary btn-lg">Participe <%= fa_icon("heart") %></a>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-sm-4 text-center wow fadeInUp">
-        <%= image_tag "colorized-lightbulb/orange-lamp.png", class: "header-img", alt: "Header Image" %>
-      </div>
-    </div>
-    
+<!-- Container -->
+<div class="container" id="explore"> 
+  <!-- Hero Image -->
+  <div class="section-title">
+    <h2>Grandes ideias merecem sair do papel</h2>
+    <h4>Colabore com boas ideias, construa, desenvolva</h4>
   </div>
-</section>
-
-<!--Main 1-->
-<section id="main1">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6 margin-30">
-        <h2>Grandes ideias merecem sair do papel</h2><br />
-        <p>Sabe aquelas ideias: "poderia ter um livro sobre x, e se tivesse um lugar y, ou um site w" essas ideias que a gente tem que seriam super legais mas acaba deixando pra lá! Pois bem, o agregadordeideias.com, é o lugar para divulgar suas ideias para que pessoas com as habilidades necessárias possam te ajudar a executar, tirar esta ideia do papel, fazer acontecer e transforma a vida de muita gente. </p><br />
-        <blockquote>
-          Teve uma ideia mas não sabe nem por onde começar? Obtenha feedback e apoio para executar suas ideias mais mirabolantes. Gostou de alguma ideia, quer ajudar a executar? Entre em contato com o autor e bote a mão na massa. Nós te ajudamos a organizar e executar sua ideia. Confira nossa página de execução.
-        </blockquote>
-        <br />
-        <a href="#message" class="btn btn-secondary btn-lg">Participe <%= fa_icon("heart") %></a>
-      </div>
-      
-      <div class="col-sm-6 wow fadeInUpBig">
-        <%= image_tag "colorized-lightbulb/lightblue-lamp.png", class: "main1-img img-responsive pull-right", alt: "Main1 Image" %>
-      </div>
-    </div>
+  <section class="row heroimg breath">
+    <div class="col-md-12 text-center"> <%= image_tag "preview.png", alt: "Boas-ideias-imagem" %></div>
+  </section>
+  <!-- //Hero Image --> 
+  
+  <!-- Features Section -->
+  <div class="section-title">
+    <h2>As melhores ideias devem ser executadas</h2>
+    <h4>Nas mais diversas areas. Grandes ideias merecem sair do papel.</h4>
   </div>
-</section>
-
-<!--Main 2-->
-<section id="main2">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-sm-6 wow fadeInUpBig">
-        <%= image_tag "main2.png", class: "main2-img pull-left", alt: "Main2 Image" %>
-      </div>
-    
-      <div class="col-sm-6 margin-30">
-        <h2>Gente boa transforma o mundo com boas ideias</h2><br />
-        <p>Gem boa transforma o mundo com inciativa e com colaboração impactam a sociedade.<br />Colabore com boas ideias, faça parte, construa, desenvolva:</p><br />
-        
-        <br />
-        <a href="#message" class="btn btn-secondary btn-lg">Participe <%= fa_icon("heart") %></a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!--Message-->
-<section id="message">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <h2 class="white">Faça Parte</h2>
-        <%= link_to "/auth/facebook", class: "btn btn-primary btn-lg" do %>
-          Facebook&nbsp;<%= fa_icon("facebook") %>
-        <% end %>
-
-        <%= link_to "/auth/twitter", class: "btn btn-primary btn-lg" do %>
-          Twitter&nbsp;<%= fa_icon("twitter") %>        
-        <% end %>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!--Bottom-->
-<section id="bottom">
-  <div class="container">
-    
-    <div class="row margin-40">
-      <div class="col-sm-12 text-center">
-        <ul class="list-inline social">
-          <li class="wow slideInLeft" data-wow-delay="0.3s"><a href="facebook.com/gilgomes27"><i class="fa fa-facebook fa-2x"></i></a></li>
-          <li class="wow slideInRight" ><a href="twitter.com/gil27"><i class="fa fa-twitter fa-2x"></i></a></li>
-          <li class="wow slideInRight" data-wow-delay="0.3s"><a href="github.com/gil27"><i class="fa fa-github fa-2x"></i></a></li>
-        </ul>
+  <section class="row features"> 
+    <!-- Feature 01 -->
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail"> <%= image_tag "flat-feature-icon-1.png", alt: "analytics-icon" %>
+        <div class="caption">
+          <h3>Educação</h3>
+          <p>Colabore com a edução do país, contribua para uma educação melhor.</p>
+        </div>
       </div>
     </div>
     
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <p><strong><em>Faça Parte:</em></strong></p>
-        <%= link_to "/auth/facebook", class: "btn btn-secondary btn-lg" do %>
-          Facebook&nbsp;<%= fa_icon("facebook") %>
-        <% end %>
-
-        <%= link_to "/auth/twitter", class: "btn btn-secondary btn-lg" do %>
-          Twitter&nbsp;<%= fa_icon("twitter") %>        
-        <% end %>
+    <!-- Feature 02 -->
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail"> <%= image_tag "flat-feature-icon-2.png", alt: "analytics-icon" %>
+        <div class="caption">
+          <h3>Social</h3>
+          <p>Adentre o terceiro setor, ajude a alavancar os melhores e mais promissores projetos da area.</p>
+        </div>
       </div>
     </div>
     
+    <!-- Feature 03 -->
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail"> <%= image_tag "flat-feature-icon-3.png", alt: "analytics-icon" %>
+        <div class="caption">
+          <h3>Tecnologia</h3>
+          <p>Idealize, crie e compartilhe apps e websites que revolucionarão o planeta.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Feature 04 -->
+    
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail"> <%= image_tag "flat-feature-icon-4.png", alt: "analytics-icon" %>
+        <div class="caption">
+          <h3>Network</h3>
+          <p>Conectesse. Discuta ideias, aprenda, ensine com quem deseja fazer a diferença.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- // Container Ends --> 
+
+<!-- Grey Highlight Section -->
+<div class="highlight testimonials">
+  <div class="container"> 
+    
+    <!-- Testimonials -->
+    <div class="section-title">
+      <h2>Feito por pessoas</h2>
+      <h4>Para pessoas, Não fique de fora. Faça Parte</h4>
+    </div>
+    <section class="row breath">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="testblock"> Teve uma ideia mas não sabe nem por onde começar? Obtenha feedback e apoio para executar suas ideias mais mirabolantes. Gostou de alguma ideia, quer ajudar a executar? Entre em contato com o autor e bote a mão na massa. Nós te ajudamos a organizar e executar sua ideia.</div>
+        <div class="clientblock"> <%= image_tag "gil.jpeg", alt: "." %>
+          <p><strong>Gil Gomes</strong> <br>
+            Web Developer na <a href="www.flexait.com.br">Flexa IT</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- // End Testimonials --> 
   </div>
-</section>
+</div>
+<!-- // End Grey Highlight Section --> 

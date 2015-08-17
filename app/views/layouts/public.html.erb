@@ -18,46 +18,111 @@
 
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
-    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+    <%#= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
     <%= javascript_include_tag "application" %>
 
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <%= link_to root_path class:"navbar-brand" do %><%= image_tag "colorized-lightbulb/lightblue-lamp-inner.png", alt: "logo", size: "90x100"  %><% end %>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to execute_path do %><%= fa_icon("home") %> Home<% end %></li>
-            <li><%= link_to execute_path do %><%= fa_icon("rocket") %> Execute<% end %></li>
-            <li><%= link_to sobre_path do %><%= fa_icon("info-circle") %> Sobre<% end %></li>
-          </ul>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-    
-    <%= yield %>
-    
-    <footer>
-      <div class="container">
+    <div class="preloader"></div>
+    <!-- Parallax Header Starts -->
+    <main id="top" class="masthead" role="main">
+      <div class="container"> 
+        <!-- Startup Logo -->
+        <div class="logo"> <a href="#"><%= image_tag "startup-template-logo.png", alt: "startup-logo" %></a> </div>
+        <!-- Hero Title -->
+        <h1>Tenha Acesso á <strong>Grandes</strong> ideias<br>
+        <span data-typer-targets="Inove,Colabore,Participe,Compartilhe,Aprenda,Execute">Effect</span>, <strong>Transforme</strong> o mundo com <strong>ideias</strong></h1>
+        <!-- Mailchimp Subscribe form -->
         <div class="row">
-          <div class="col-sm-12 text-center">
-            <p><small>Copyright &copy; gilgomes.com.br. All rights reserved.</small></p>
-          </div>
+          <div class="col-md-6 col-sm-12 col-md-offset-3 subscribe">
+            gil
+            <span id="result" class="alertMsg"></span> </div>
+        </div>
+        <!-- // Mailchimp Subscribe form Ends --> 
+        <!--  Scroll to Explore --> 
+        <a href="#explore" class="scrollto">
+        <p>CONHEÇA MAIS, EXPLORE</p>
+        <p class="scrollto--arrow"><%= image_tag "scroll_down.png", alt: "scroll down arrow" %></p>
+        </a> 
+        <!-- // Scroll to Explore Ends --> 
+      </div>
+    </main>
+    <!-- // Parallax Header Ends --> 
+
+    <%= bootstrap_flash %>
+    <%= yield %>
+
+
+    <!-- Parallax Footer Starts -->
+    <main class="footercta" role="main">
+      <div class="container"> 
+        
+        <!-- Hero Title -->
+
+        <h1>Gente boa transforma o mundo.<br >
+        <strong>Impacte</strong> com colaboração e <strong>boas ideias</strong></h1>
+        <!-- Mailchimp Subscribe form -->
+        <div class="row">
+          <div class="col-md-12 breath text-center"> <a href="#top" class="btn btn-success btn-lg gototop">ACESSE AGORA</a> </div>
         </div>
       </div>
-    </footer>
+    </main>
+    <!-- // Parallax Footer Ends --> 
+
+    <!-- Container -->
+    <div class="container">
+      <section class="row breath">
+        <div class="col-md-12 footerlinks">
+          <p>&copy; 2014 Gil Gomes. All Rights Reserved</p>
+        </div>
+      </section>
+      <!-- // End Client Logos --> 
+      
+    </div>
+    <!-- // Container Ends --> 
+
+    <!-- JS and analytics only. --> 
+    <!-- Bootstrap core JavaScript
+    ================================================== --> 
+    <!-- Placed at the end of the document so the pages load faster --> 
+    <!-- 
+    <script src="js/jquery.js"></script> 
+    <script src="js/bootstrap.js"></script> 
+    <script src="js/easing.js"></script> 
+    <script src="js/typer.js"></script> 
+    <script src="js/nicescroll.js"></script> 
+    <script src="js/ketchup.all.js"></script> 
+ -->
+    <!-- Typer --> 
+
     <script>
-      new WOW().init();
+        $(function () {
+          $('[data-typer-targets]').typer();
+        });
+      </script> 
+
+    <!-- Scroll to Explore --> 
+
+    <script>
+
+
+     $(function() {
+        $('.scrollto, .gototop').bind('click',function(event){
+         var $anchor = $(this);
+         $('html, body').stop().animate({
+             scrollTop: $($anchor.attr('href')).offset().top
+              }, 1500,'easeInOutExpo');
+         event.preventDefault();
+          });
+      });
+            
+
     </script>
+
+
+    <!--============== SUBSCRIBE FORM =================--> 
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -67,5 +132,6 @@
       ga('create', 'UA-56333641-1', 'auto');
       ga('send', 'pageview');
     </script>
+
   </body>
 </html>
