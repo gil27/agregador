@@ -1,56 +1,47 @@
-require "bundler/capistrano"
-require "rvm/capistrano"
+# config valid only for current version of Capistrano
+lock '3.4.0'
 
-set :application, "gilgomes.com.br"
-set :repository,  "https://github.com/gil27/agregador.git"
-set :scm, :git
+set :application, 'agregadordeideias.com'
+set :repo_url, 'git@github.com:gil27/agregador.git'
 
-role :web, "gilgomes.com.br"
-role :app, "gilgomes.com.br"
-role :db,  "gilgomes.com.br", :primary => true
+set :passenger_restart_with_touch, true
+# Default branch is :master
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-set :deploy_to, "/home/gil/agregador"
-set :user, "gil"
+# Default deploy_to directory is /var/www/my_app_name
+set :deploy_to, '/home/gil/agregador'
+set :user, 'gil'
 set :use_sudo, false
+set :scm, :git
+set :rvm_type, :user
+set :rails_env, 'production'
+set :rvm_ruby_string, 'ruby-2.1.3'
+
+
+# Default value for :pty is false
+ set :pty, true
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+
+# Default value for :linked_files is []
+set :linked_files, fetch(:linked_files, %w(database.yml secrets.yml omniauth.rb)).push('config/database.yml', 'config/secrets.yml', 'config/initializers/omniauth.rb')
+
+# Default value for linked_dirs is []
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
 set :keep_releases, 5
 
 namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "cd #{release_path} && touch tmp/restart.txt"
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
   end
 
-  task :bundleinstall, :roles => :app do
-    run "cd #{release_path}; bundle exec bundle install"
-  end
-
-  task :database, :roles => :app do
-    run "cp #{deploy_to}/shared/database.yml #{release_path}/config/"
-    run "cd #{release_path}; bundle exec rake db:migrate RAILS_ENV=production"
-  end
-
-  task :secrets, :roles => :app do
-    run "cp #{deploy_to}/shared/secrets.yml #{release_path}/config/"
-  end
-
-  task :omniauth, :roles => :app do
-    run "cp #{deploy_to}/shared/omniauth.rb #{release_path}/config/initializers/"
-  end
-
-  task :rvmrc, :roles => :app do
-    run "rm -f #{release_path}/.rvmrc"
-  end
 end
-
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-
-set :rvm_type, :user
-set :rails_env, "production"
-set :rvm_ruby_string, 'ruby-2.1.3'
-
-ssh_options[:forward_agent] = true
-default_run_options[:pty] = true
-
-#after :deploy, 'deploy:jekyll'
-after 'deploy:update_code', 'deploy:bundleinstall',  "deploy:database", "deploy:omniauth", "deploy:secrets", "deploy:restart"
