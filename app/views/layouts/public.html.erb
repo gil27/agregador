@@ -34,12 +34,20 @@
         <h1>Tenha Acesso á <strong>Grandes</strong> ideias<br>
         <span data-typer-targets="Inove,Colabore,Participe,Compartilhe,Aprenda,Execute">Effect</span>, <strong>Transforme</strong> o mundo com <strong>ideias</strong></h1>
         <!-- Mailchimp Subscribe form -->
+        
         <div class="row">
-          <div class="col-md-6 col-sm-12 col-md-offset-3 subscribe">
-            gil
-            <span id="result" class="alertMsg"></span> </div>
+          <div class="col-md-12">
+            <div class=" multiple-btns text-center has-margin-vertical">  
+              <%= link_to "/auth/facebook", class: "btn btn-success btn-lg" do %>
+              Facebook&nbsp;<%= fa_icon("facebook") %>
+            <% end %>
+
+            <%= link_to "/auth/twitter", class: "btn btn-warning btn-lg" do %>
+              Twitter<%= fa_icon("twitter") %>        
+            <% end %>
+            </div>
+          </div>
         </div>
-        <!-- // Mailchimp Subscribe form Ends --> 
         <!--  Scroll to Explore --> 
         <a href="#explore" class="scrollto">
         <p>CONHEÇA MAIS, EXPLORE</p>
