@@ -17,4 +17,8 @@
 //= require turbolinks
 //= require jquery.infinitescroll
 //= require tagsinput
+//= require easing
+//= require typer
+//= require nicescroll
+//= require ketchup.all
 //= require_tree .

@@ -185,7 +185,7 @@ a:hover, a:focus {
 	text-align: center;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
 	background-color: #6883cc;
-	background-image:assets-url("header_bg_gradient.jpg");
+	background-image:asset-url("header_bg_gradient.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -576,7 +576,7 @@ to {
 	text-align: center;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
 	background-color: #6883cc;
-	background-image:assets-url("footer_img.jpg");
+	background-image:asset-url("footer_img.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -711,12 +711,12 @@ padding: 15px 0;
 
 
 .web-app .masthead {
-	background-image:assets-url("header_color_2.jpg");
+	background-image:asset-url("header_color_2.jpg");
 	padding-bottom:0;
 }
 
 .web-app .footercta {
-	background-image:assets-url("footer_color_2.jpg");
+	background-image:asset-url("footer_color_2.jpg");
 }
 
 
@@ -733,7 +733,7 @@ padding: 15px 0;
 
 
 .mob-app .masthead {
-	background-image:assets-url("header_color_3.jpg");
+	background-image:asset-url("header_color_3.jpg");
 }
 
 .multiple-links a img {
@@ -741,7 +741,7 @@ padding: 15px 0;
 }
 
 .mob-app .footercta {
-	background-image:assets-url("footer_color_3.jpg");
+	background-image:asset-url("footer_color_3.jpg");
 }
 
 
