@@ -5,10 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def authenticate_user!
-    if current_user
-    else
-      redirect_to '/welcome'
-    end
+    redirect_to '/welcome' unless current_user
   end
 
 	private
