@@ -15,7 +15,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'spring',        group: :development
 gem 'capistrano', '2.15.5'
-gem 'rvm-capistrano'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
