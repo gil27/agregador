@@ -17,11 +17,18 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{agregadordeideias.com}
-role :web, %w{agregadordeideias.com}
-role :db,  %w{agregadordeideias.com}
+role :app, %w{gilgomes.com.br}
+role :web, %w{gilgomes.com.br}
+role :db,  %w{gilgomes.com.br}
 
 set :branch, 'master'
+set :deploy_to, '/home/gil/agregador'
+set :user, 'gil'
+set :use_sudo, false
+set :scm, :git
+set :rvm_type, :user
+set :rails_env, 'production'
+set :rvm_ruby_string, 'ruby-2.1.3'
 
 # Configuration
 # =============
