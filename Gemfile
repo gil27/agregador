@@ -13,11 +13,6 @@ gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'spring',        group: :development
-gem 'capistrano'
-gem 'capistrano-passenger'
-gem 'capistrano-rvm'
-gem 'capistrano-bundler'
-gem 'capistrano-rails'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
