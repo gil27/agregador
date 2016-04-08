@@ -33,7 +33,7 @@ task :environment do
   # invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
-  invoke :'rvm:use[ruby-2.1.3]'
+  invoke :'rvm:use[ruby-2.2.3]'
 end
 
 
